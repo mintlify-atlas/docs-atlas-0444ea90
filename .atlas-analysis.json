@@ -1,0 +1,140 @@
+{
+  "projectType": "api-service",
+  "projectName": "Intercom Manager",
+  "projectDescription": "Open source WebRTC-based intercom solution for broadcast and media production environments with low latency voice communication.",
+  "theme": "aspen",
+  "primaryColor": "#040404",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/environment-variables",
+              "deployment/terraform",
+              "deployment/eyevinn-osc"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/productions",
+              "concepts/lines",
+              "concepts/sessions",
+              "concepts/webrtc-integration"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/database-setup",
+              "guides/symphony-media-bridge",
+              "guides/whip-whep",
+              "guides/authentication"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Productions",
+            "pages": [
+              "api-reference/productions/list",
+              "api-reference/productions/create",
+              "api-reference/productions/get",
+              "api-reference/productions/update",
+              "api-reference/productions/delete"
+            ]
+          },
+          {
+            "group": "Lines",
+            "pages": [
+              "api-reference/lines/create",
+              "api-reference/lines/update",
+              "api-reference/lines/delete"
+            ]
+          },
+          {
+            "group": "Sessions",
+            "pages": [
+              "api-reference/sessions/create",
+              "api-reference/sessions/join",
+              "api-reference/sessions/update",
+              "api-reference/sessions/leave",
+              "api-reference/sessions/remove"
+            ]
+          },
+          {
+            "group": "WHIP/WHEP",
+            "pages": [
+              "api-reference/whip-whep/whip",
+              "api-reference/whip-whep/whep",
+              "api-reference/whip-whep/trickle-ice"
+            ]
+          },
+          {
+            "group": "Ingests",
+            "pages": [
+              "api-reference/ingests/list",
+              "api-reference/ingests/create",
+              "api-reference/ingests/get",
+              "api-reference/ingests/update",
+              "api-reference/ingests/delete"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Low latency WebRTC-based voice communication",
+    "Production and line management",
+    "WHIP/WHEP protocol support",
+    "Symphony Media Bridge integration",
+    "MongoDB and CouchDB database support",
+    "Docker and Terraform deployment",
+    "Rate limiting and security headers",
+    "Link sharing and re-authentication"
+  ],
+  "publicApiSurface": [
+    "GET /api/v1/productions - List all productions",
+    "POST /api/v1/productions - Create a production",
+    "GET /api/v1/productions/:productionId - Get production details",
+    "PATCH /api/v1/productions/:productionId - Update production",
+    "DELETE /api/v1/productions/:productionId - Delete production",
+    "POST /api/v1/productions/:productionId/lines - Create a line",
+    "PATCH /api/v1/productions/:productionId/lines/:lineId - Update line",
+    "DELETE /api/v1/productions/:productionId/lines/:lineId - Delete line",
+    "POST /api/v1/productions/:productionId/lines/:lineId/sessions - Create session",
+    "PUT /api/v1/productions/:productionId/lines/:lineId/sessions/:sessionId - Join session",
+    "PATCH /api/v1/productions/:productionId/lines/:lineId/sessions/:sessionId - Update session",
+    "DELETE /api/v1/productions/:productionId/lines/:lineId/sessions/:sessionId - Leave session",
+    "POST /api/v1/whip/:productionId/:lineId - WHIP endpoint for publishing",
+    "POST /api/v1/whep/:productionId/:lineId - WHEP endpoint for subscribing",
+    "GET /api/v1/ingests - List all ingests",
+    "POST /api/v1/ingests - Create ingest",
+    "GET /api/v1/ingests/:ingestId - Get ingest details",
+    "PATCH /api/v1/ingests/:ingestId - Update ingest",
+    "DELETE /api/v1/ingests/:ingestId - Delete ingest"
+  ]
+}
